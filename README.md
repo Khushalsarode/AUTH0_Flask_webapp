@@ -1,36 +1,37 @@
 # Auth0 Python Web App Sample
-
 This sample demonstrates how to add authentication to a Python web app using Auth0.
 
 # Running the App
+Before Running application or clonning of code please ensure to do following:
+- To run the sample, make sure you have `python3` and `pip` installed.
+- create an folder in your system and open cmd in the folder path
+- If you have virtualenv already skip this step otherwise install it use 'pip install virtualenv' & check using 'virtualenv -version'
+- Make an envirnment using 'python -m venv <nameforyourenv>
+- To activate env : '<nameforyourenv>\Scripts\activate' or '<nameforyourenv>\Scripts\activat.bat' can be used either way
+- Clone the repository into the folder
+- Run: 'pip install -r requirements.txt'
+- create an `.env` and populate it with the client ID, domain, secret, callback URL and audience for your
+Auth0 app.
 
-To run the sample, make sure you have `python3` and `pip` installed.
-
-Rename `.env.example` to `.env` and populate it with the client ID, domain, secret, callback URL and audience for your
-Auth0 app. If you are not implementing any API you can use `https://YOUR_DOMAIN.auth0.com/userinfo` as the audience.
-Also, add the callback URL to the settings section of your Auth0 client.
-
+- .env file
+  '''
+     AUTH0_CLIENT_ID=
+     AUTH0_CLIENT_SECRET=
+     AUTH0_DOMAIN=
+     APP_SECRET_KEY=
+you will get all above three value in application setting page of auth0 when logined and created application
+For App_SECRET_KEY use 'openssl rand hex 32' and paste it here run command using shell
+'''
+- After this add the following url as suggested:
+- replace localhost by <local_DNS_IP> i.e 127.0.0.1 
 Register `http://localhost:3000/callback` as `Allowed Callback URLs` and `http://localhost:3000`
 as `Allowed Logout URLs` in your client settings.
 
-Run `pip install -r requirements.txt` to install the dependencies and run `python server.py`.
-The app will be served at [http://localhost:3000/](http://localhost:3000/).
-
-# Running the App with Docker
-
-To run the sample, make sure you have `docker` installed.
-
-To run the sample with [Docker](https://www.docker.com/), make sure you have `docker` installed.
-
-Rename the .env.example file to .env, change the environment variables, and register the URLs as explained [previously](#running-the-app).
-
-Run `sh exec.sh` to build and run the docker image in Linux or run `.\exec.ps1` to build
-and run the docker image on Windows.
+- Run `pip install -r requirements.txt` to install the dependencies and run `python server.py`.
+- The app will be served at [http://localhost:3000/](http://localhost:3000/).
 
 ## What is Auth0?
-
 Auth0 helps you to:
-
 * Add authentication with [multiple authentication sources](https://auth0.com/docs/identityproviders),
 either social like **Google, Facebook, Microsoft Account, LinkedIn, GitHub, Twitter, Box, Salesforce, among others**,or
 enterprise identity systems like **Windows Azure AD, Google Apps, Active Directory, ADFS or any SAML Identity Provider**.
@@ -45,12 +46,6 @@ enterprise identity systems like **Windows Azure AD, Google Apps, Active Directo
 
 1. Go to [Auth0](https://auth0.com) and click Sign Up.
 2. Use Google, GitHub or Microsoft Account to login.
-
-## Issue Reporting
-
-If you have found a bug or if you have a feature request, please report them at this repository issues section.
-Please do not report security vulnerabilities on the public GitHub issue tracker.
-The [Responsible Disclosure Program](https://auth0.com/whitehat) details the procedure for disclosing security issues.
 
 ## Author
 
