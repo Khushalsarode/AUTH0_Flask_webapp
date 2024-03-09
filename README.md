@@ -14,14 +14,14 @@ Before Running application or clonning of code please ensure to do following:
 Auth0 app.
 
 - .env file
-  `
+  ```
      AUTH0_CLIENT_ID=
      AUTH0_CLIENT_SECRET=
      AUTH0_DOMAIN=
      APP_SECRET_KEY=
 you will get all above three value in application setting page of auth0 when logined and created application
 For App_SECRET_KEY use 'openssl rand hex 32' and paste it here run command using shell
-`
+```
 - After this add the following url as suggested:
 - replace localhost by <local_DNS_IP> i.e 127.0.0.1 
 Register `http://localhost:3000/callback` as `Allowed Callback URLs` and `http://localhost:3000`
